@@ -1,0 +1,21 @@
+services:
+  # 1. RouteWise FastAPI Backend Service
+  - type: web
+    name: routewise-backend
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
+
+  # 2. RouteWise React Frontend Service
+  - type: web
+    name: routewise-frontend
+    env: static
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: "./frontend/dist"
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
