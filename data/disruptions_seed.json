@@ -1,0 +1,42 @@
+[
+  {
+    "id": "DISRUPT_RED_TUNNEL",
+    "title": "Red Line Tunnel Maintenance (Central - Tech Park)",
+    "description": "Simulated emergency power inspection on Metro Red Line between Central Station and Tech Park. Forces passengers onto Route 101 bus or multi-line transfers.",
+    "affected_edges": ["EDGE_M1_03", "EDGE_M1_03_REV"],
+    "affected_stops": [],
+    "status_code": "CANCELLED",
+    "severity": "HIGH",
+    "is_active": false
+  },
+  {
+    "id": "DISRUPT_PORT_ISOLATION",
+    "title": "Port Terminal Bridge Closure (Destination Unreachable)",
+    "description": "Simulated structural inspection of the Harbor-to-Port viaduct. Port Terminal is a terminus with a single link, demonstrating disconnected network and unreachable destination handling.",
+    "affected_edges": ["EDGE_M3_01", "EDGE_M3_01_REV"],
+    "affected_stops": ["STN_PORT_TERMINAL"],
+    "status_code": "CANCELLED",
+    "severity": "CRITICAL",
+    "is_active": false
+  },
+  {
+    "id": "DISRUPT_OLD_TOWN_BUS",
+    "title": "Old Town Road Works (Bus Route 204)",
+    "description": "Road resurfacing halts direct bus service between Central Station and Old Town Square. Commuters must transfer through Cultural Center or Financial District.",
+    "affected_edges": ["EDGE_B204_03", "EDGE_B204_03_REV"],
+    "affected_stops": [],
+    "status_code": "DELAYED",
+    "severity": "MEDIUM",
+    "is_active": false
+  },
+  {
+    "id": "DISRUPT_MULTI_CORRIDOR",
+    "title": "Dual Metro Corridor Maintenance",
+    "description": "Simulated simultaneous track work on Red Line (Central - Tech Park) and Green Line (Financial - Marina Bay), demonstrating complex rerouting across the network.",
+    "affected_edges": ["EDGE_M1_03", "EDGE_M1_03_REV", "EDGE_M3_04", "EDGE_M3_04_REV"],
+    "affected_stops": [],
+    "status_code": "CANCELLED",
+    "severity": "CRITICAL",
+    "is_active": false
+  }
+]
